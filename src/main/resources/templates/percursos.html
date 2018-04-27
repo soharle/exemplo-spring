@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Percursos</title>
+</head>
+<body>
+<h1>Percursos</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Quilometragem</th>
+    </tr>
+    <tr th:each="percurso:${percursos}">
+        <td th:text="${percurso.id}"></td>
+        <td th:text="${percurso.nome}"></td>
+        <td th:text="${percurso.quilometragem}"></td>
+    </tr>
+</table>
+</body>
+</html>
